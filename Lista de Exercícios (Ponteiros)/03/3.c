@@ -10,7 +10,6 @@ int main() {
     i = *&*&j;
     //q = *p;
     i = (*p)++ + *q;
-    int a = (2) + (3);
 
     printf("%d %d %p %p", i, j, p, q);
 } 
