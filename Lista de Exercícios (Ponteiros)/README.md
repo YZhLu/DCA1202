@@ -16,4 +16,7 @@ Não coloque programas executáveis nos diretórios, apenas código-fonte em
 
 Caso encontre algum problema na lista, favor comunicar ao professor.
 
-#### [1](https://github.com/YZhLu/DCA1202/blob/main/Lista%20de%20Exerc%C3%ADcios%20(Ponteiros)/01/1.md)
+# As questões
+
+#### [1.](https://github.com/YZhLu/DCA1202/blob/main/Lista%20de%20Exerc%C3%ADcios%20(Ponteiros)/01/1.md)
+#### [2.](https://github.com/YZhLu/DCA1202/blob/main/Lista%20de%20Exerc%C3%ADcios%20(Ponteiros)/02/2.md)
