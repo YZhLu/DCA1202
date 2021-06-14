@@ -1,0 +1,9 @@
+Esta lista contém um conjunto de pequenos programas que você deverá desenvolver para atingir os objetivos idealizados para a disciplina. Você poderá desenvolver os programas em qualquer ambiente mas, para submeter, pede-se que crie um repositório no github semelhante a este que segue:
+https://github.com/agostinhobritojr/exemplo-tarefas
+Perceba que existe uma árvore de diretórios, onde cada projeto (associado a cada questão) ocupa exatamente um diretório específico. Os diretórios tem os nomes questao01, questao02, questao03, etc.
+Seguindo essa ideia, crie seu próprio repositório no github para submeter as tarefas. No SIGAA, você deverá submeter na tarefa (quando essa for aberta), o link para o repositório que criou, semelhante a este que forneci acima.
+Há vários tutoriais de uso do github na Internet. Este aqui explica direitinho o processo de uso. claro, você poderá encontrar outros mais interessantes que aprofundem melhor o uso da ferramenta.
+Para instalar o git em sua máquina (e assim usar os recursos do github), acesse https://www.git- scm.com/ e siga os passos de instalação.
+O que você deverá submeter? APENAS a resposta. Para algumas questões sequer você precisará fazer um programa para encontrar a solução (algumas delas, inclusive, nem dá para fazer isso). Submeta os programas que você fizer nos diretórios como parte da sua resposta, incluindo no código os comentários necessários para o bom entendimento do que você fez.
+Não coloque programas executáveis nos diretórios, apenas código-fonte em C. Em alguns casos, o próprio github pode apresentar mensagens de erro se você tentar submeter sua árvore com executáveis dentro.
+Caso encontre algum problema na lista, favor comunicar ao professor.
