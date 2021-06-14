@@ -15,3 +15,5 @@ O que você deverá submeter? APENAS a resposta. Para algumas questões seque
 Não coloque programas executáveis nos diretórios, apenas código-fonte em C. Em alguns casos, o próprio github pode apresentar mensagens de erro se você tentar submeter sua árvore com executáveis dentro.
 
 Caso encontre algum problema na lista, favor comunicar ao professor.
+
+#### [1](https://github.com/YZhLu/DCA1202/blob/main/Lista%20de%20Exerc%C3%ADcios%20(Ponteiros)/01/1.md)
