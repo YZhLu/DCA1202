@@ -1,10 +1,4 @@
-/*
-
-5. Determine o que será mostrado pelo seguinte programa 
-(compile-o, execute-o e verifique se foram obtidas 
-as respostas esperadas).
-
-*/
+#include <stdio.h>
 
 int main(void) {
 
