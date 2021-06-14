@@ -8,7 +8,7 @@ Seguindo essa ideia, crie seu próprio repositório no github para submeter as
 
 Há vários tutoriais de uso do github na Internet. Este aqui explica direitinho o processo de uso. claro, você poderá encontrar outros mais interessantes que aprofundem melhor o uso da ferramenta.
 
-Para instalar o git em sua máquina (e assim usar os recursos do github), acesse https://www.git- scm.com/ e siga os passos de instalação.
+Para instalar o git em sua máquina (e assim usar os recursos do github), acesse https://www.git-scm.com/ e siga os passos de instalação.
 
 O que você deverá submeter? APENAS a resposta. Para algumas questões sequer você precisará fazer um programa para encontrar a solução (algumas delas, inclusive, nem dá para fazer isso). Submeta os programas que você fizer nos diretórios como parte da sua resposta, incluindo no código os comentários necessários para o bom entendimento do que você fez.
 
