@@ -1,5 +1,5 @@
 #include <stdio.h>      /* printf */
-#include <stdlib.h>     /* qsort */
+#include <stdlib.h>     /* malloc, qsort */
 
 int values[] = { 40, 10, 100, 90, 20, 25 };
 
