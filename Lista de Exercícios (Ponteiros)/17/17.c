@@ -28,6 +28,7 @@ int main() {
 
     free(vector2);
     free(vector1);
+    
     return 0;
 }
 
