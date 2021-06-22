@@ -31,7 +31,7 @@ int main() {
     return 0;
 }
 
-void addVectors(int *v1, int *v2, int *addVector, int n){
+void addVectors(int *v1, int *v2, int *addVector, int n) {
     addVector = malloc(n * sizeof(int));
     for(int i=0; i<n; i++){
         addVector[i] = v1[i] + v2[i];
