@@ -37,7 +37,7 @@ int main() {
     
     time14 = clock();
 
-    my_qsort(vector, n, sizeof(float), compare); 
+    qsort(vector, n, sizeof(float), compare); 
 
     printf("\nEis o teu vetor em ordem crescente: \n[");
 
@@ -67,7 +67,7 @@ int main() {
     
     time15 = clock();
 
-    qsort(vector, n, sizeof(float), compare); 
+    my_qsort(vector, n, sizeof(float), compare); 
 
     printf("\nEis o teu vetor em ordem crescente: \n[");
 
@@ -82,11 +82,11 @@ int main() {
 
     free(vector); 
 
-    printf("\n|>>>>>>________________________________<<<<<<|\n");
-    printf("\n »Tempo de execução de 14.c: %f seconds\n", execTime14);
-    printf("\n »Tempo de execução de 15.c: %f seconds\n", execTime15);
+    printf("\n|>>>>>>______________________________________________<<<<<<|\n");
+    printf("\n »Tempo de execução de 14.c 'qsort()': %f seconds\n", execTime14);
+    printf("\n »Tempo de execução de 15.c 'my_qsort()': %f seconds\n", execTime15);
     printf("\n »»Tempo total: %f seconds\n", (clock() - time) / (double) CLOCKS_PER_SEC);
-    printf("\n|<<<<<<________________________________>>>>>>|\n");
+    printf("\n|<<<<<<______________________________________________>>>>>>|\n");
 
     return 0;
     
