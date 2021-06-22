@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 void comprarBTC (int *balance, int compra) {
-   
     *balance = *balance + compra;
     *(balance + 1) = *(balance + 1) - compra;
 
@@ -11,7 +10,6 @@ void comprarBTC (int *balance, int compra) {
 }
 
 void venderUSD (int *balance, int venda) {
-    
     *balance = *balance + venda;
     *(balance + 1) = *(balance + 1) - venda;
     
