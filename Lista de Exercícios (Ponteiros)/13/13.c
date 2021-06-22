@@ -35,4 +35,6 @@ int main(){
     printf("%f]\n", vector[n - 1]);
 
     free(vector);
+    
+    return 0;
 }
