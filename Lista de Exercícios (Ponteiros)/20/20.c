@@ -25,6 +25,7 @@ void mallocTest(void) {
 
 void GC_mallocTest(void) {
     char *string;
+    
 
     string = GC_malloc(sizeof(char) * 5);
     if (string == NULL) {
@@ -41,6 +42,7 @@ void GC_mallocTest(void) {
 }
 
 int main(){
+    
     clock_t time = clock(), timeMalloc, timeGC_Malloc;
     float execTimeMalloc, execTimeGC_Malloc;
 
@@ -53,6 +55,7 @@ int main(){
 
     printf("\nTempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando GC_mallocTest()");
+    GC_INIT();
     timeGC_Malloc = clock();
     GC_mallocTest();
     execTimeGC_Malloc = (clock() - timeGC_Malloc)/ (double) CLOCKS_PER_SEC;
