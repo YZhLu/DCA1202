@@ -20,7 +20,11 @@ Uma função GC_REALLOC se comporta como o realloc da biblioteca C.
 Ele aloca memória livre de ponteiro não inicializada
 se o objeto original foi alocado dessa maneira.
 
-A seguir temos um exemplo:
+A seguir temos um exemplo.
+
+O código original pode ser encontrado em:
+https://www.hboehm.info/gc/simple_example.html
+
 */
 
 int main() {
