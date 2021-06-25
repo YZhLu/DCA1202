@@ -45,7 +45,7 @@ int main(){
     clock_t time = clock(), timeMalloc, timeGC_Malloc;
     float execTimeMalloc, execTimeGC_Malloc;
 
-    printf("Tempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
+    printf("Tempo atual: %f time units", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando mallocTest()");
     timeMalloc = clock();
     for (int i = 0; i < count; i++) {
@@ -53,23 +53,23 @@ int main(){
     }
     
     execTimeMalloc = (clock() - timeMalloc) / (double) CLOCKS_PER_SEC;
-    printf("\nTempo de execução de mallocTes(): %f seconds\n", execTimeMalloc);
+    printf("\nTempo de execução de mallocTes(): %f time units\n", execTimeMalloc);
 
-    printf("\nTempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
+    printf("\nTempo atual: %f time units", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando GC_mallocTest()");
     GC_INIT();
     timeGC_Malloc = clock();
     for (int i = 0; i < count; i++) {
-         GC_mallocTest();
+        GC_mallocTest();
     }
     execTimeGC_Malloc = (clock() - timeGC_Malloc)/ (double) CLOCKS_PER_SEC;
-    printf("\nTempo de execução de GC_mallocTest(): %f seconds\n", execTimeGC_Malloc);
+    printf("\nTempo de execução de GC_mallocTest(): %f time units\n", execTimeGC_Malloc);
 
-    printf("\n|>>>>>>_______________________________________________________<<<<<<|\n");
-    printf("\n »Tempo de execução de 'mallocTest()' » sem GC: %f seconds\n", execTimeMalloc);
-    printf("\n »Tempo de execução de 'GC_mallocTest()' » com GC: %f seconds\n", execTimeGC_Malloc);
-    printf("\n »»Tempo total: %f seconds\n", (clock() - time) / (double) CLOCKS_PER_SEC);
-    printf("\n|<<<<<<_______________________________________________________>>>>>>|\n");
+    printf("\n|>>>>>>__________________________________________________________<<<<<<|\n");
+    printf("\n »Tempo de execução de 'mallocTest()' » sem GC: %f time units\n", execTimeMalloc);
+    printf("\n »Tempo de execução de 'GC_mallocTest()' » com GC: %f time units\n", execTimeGC_Malloc);
+    printf("\n »»Tempo total: %f time units\n", (clock() - time) / (double) CLOCKS_PER_SEC);
+    printf("\n|<<<<<<__________________________________________________________>>>>>>|\n");
 
     return 0;
 }
