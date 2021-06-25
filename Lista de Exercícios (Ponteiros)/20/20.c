@@ -26,7 +26,6 @@ void mallocTest(void) {
 void GC_mallocTest(void) {
     char *string;
     
-
     string = GC_malloc(sizeof(char) * 5);
     if (string == NULL) {
         return;
@@ -42,37 +41,35 @@ void GC_mallocTest(void) {
 }
 
 int main(){
-    int count = 10000000;
+    int count = 1000000;
     clock_t time = clock(), timeMalloc, timeGC_Malloc;
     float execTimeMalloc, execTimeGC_Malloc;
 
     printf("Tempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando mallocTest()");
     timeMalloc = clock();
-    for (int i = 0; i < count; i++)
-    {
+    for (int i = 0; i < count; i++) {
         mallocTest();
     }
     
     execTimeMalloc = (clock() - timeMalloc) / (double) CLOCKS_PER_SEC;
-    printf("\nTempo de execução de 14.c: %f seconds\n", execTimeMalloc);
+    printf("\nTempo de execução de mallocTes(): %f seconds\n", execTimeMalloc);
 
     printf("\nTempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando GC_mallocTest()");
     GC_INIT();
     timeGC_Malloc = clock();
-    for (int i = 0; i < count; i++)
-    {
+    for (int i = 0; i < count; i++) {
          GC_mallocTest();
     }
     execTimeGC_Malloc = (clock() - timeGC_Malloc)/ (double) CLOCKS_PER_SEC;
-    printf("\nTempo de execução de 15.c: %f seconds\n", execTimeGC_Malloc);
+    printf("\nTempo de execução de GC_mallocTest(): %f seconds\n", execTimeGC_Malloc);
 
-    printf("\n|>>>>>>______________________________________________________<<<<<<|\n");
+    printf("\n|>>>>>>_______________________________________________________<<<<<<|\n");
     printf("\n »Tempo de execução de 'mallocTest()' » sem GC: %f seconds\n", execTimeMalloc);
     printf("\n »Tempo de execução de 'GC_mallocTest()' » com GC: %f seconds\n", execTimeGC_Malloc);
     printf("\n »»Tempo total: %f seconds\n", (clock() - time) / (double) CLOCKS_PER_SEC);
-    printf("\n|<<<<<<______________________________________________________>>>>>>|\n");
+    printf("\n|<<<<<<_______________________________________________________>>>>>>|\n");
 
     return 0;
 }
