@@ -6,9 +6,6 @@ int compare(const void*, const void*);
 void my_qsort (void *pont, int qtd, int tam, int (*func)(const void*, const void*));
 void swap(const void*, const void*);
 
-void ordena(int*, int);
-void troca(int*, int*);
-
 int main() {
     clock_t time = clock(), time14, time15;
 
