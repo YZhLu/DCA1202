@@ -14,11 +14,11 @@ void mallocTest(void) {
         return;
     }
 
-    string[0] = 'D';
-    string[1] = 'C';
-    string[2] = 'A';
-    string[3] = '1';
-    string[4] = '0';
+    string[0] = 'Y';
+    string[1] = 'Z';
+    string[2] = 'h';
+    string[3] = 'L';
+    string[4] = 'u';
     printf("%s\n", string);
     free(string);
 }
@@ -32,24 +32,28 @@ void GC_mallocTest(void) {
         return;
     }
 
-    string[0] = 'D';
-    string[1] = 'C';
-    string[2] = 'A';
-    string[3] = '2';
-    string[4] = '2';
+    string[0] = 'Y';
+    string[1] = 'Z';
+    string[2] = 'h';
+    string[3] = 'L';
+    string[4] = 'u';
     printf("%s\n", string);
     GC_free(string);
 }
 
 int main(){
-    
+    int count = 10000000;
     clock_t time = clock(), timeMalloc, timeGC_Malloc;
     float execTimeMalloc, execTimeGC_Malloc;
 
     printf("Tempo atual: %f seconds", (clock() - time) / (double) CLOCKS_PER_SEC);
     printf("\n\nIniciando mallocTest()");
     timeMalloc = clock();
-    mallocTest();
+    for (int i = 0; i < count; i++)
+    {
+        mallocTest();
+    }
+    
     execTimeMalloc = (clock() - timeMalloc) / (double) CLOCKS_PER_SEC;
     printf("\nTempo de execução de 14.c: %f seconds\n", execTimeMalloc);
 
@@ -57,7 +61,10 @@ int main(){
     printf("\n\nIniciando GC_mallocTest()");
     GC_INIT();
     timeGC_Malloc = clock();
-    GC_mallocTest();
+    for (int i = 0; i < count; i++)
+    {
+         GC_mallocTest();
+    }
     execTimeGC_Malloc = (clock() - timeGC_Malloc)/ (double) CLOCKS_PER_SEC;
     printf("\nTempo de execução de 15.c: %f seconds\n", execTimeGC_Malloc);
 
