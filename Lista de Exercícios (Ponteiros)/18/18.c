@@ -101,7 +101,6 @@ void printMatrix(int **m, int nl, int nc) {
 
     printf("\n[");
     for (int l = 0; l < nl - 1; l++) {
-        //printf("[");
         for (int c = 0; c < nc; c++) {
             printf("%d", m[l][c]);
             printf(", ");
