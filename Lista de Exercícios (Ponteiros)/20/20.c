@@ -68,11 +68,11 @@ int main(){
     execTimeGC_Malloc = (clock() - timeGC_Malloc)/ (double) CLOCKS_PER_SEC;
     printf("\nTempo de execução de 15.c: %f seconds\n", execTimeGC_Malloc);
 
-    printf("\n|>>>>>>________________________________________________<<<<<<|\n");
+    printf("\n|>>>>>>______________________________________________________<<<<<<|\n");
     printf("\n »Tempo de execução de 'mallocTest()' » sem GC: %f seconds\n", execTimeMalloc);
     printf("\n »Tempo de execução de 'GC_mallocTest()' » com GC: %f seconds\n", execTimeGC_Malloc);
     printf("\n »»Tempo total: %f seconds\n", (clock() - time) / (double) CLOCKS_PER_SEC);
-    printf("\n|<<<<<<________________________________________________>>>>>>|\n");
+    printf("\n|<<<<<<______________________________________________________>>>>>>|\n");
 
     return 0;
 }
