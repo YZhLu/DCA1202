@@ -5,6 +5,7 @@ using namespace std;
 
 int main() {
     Sculptor sculptor(10, 10, 10);
+
     //Axis
     sculptor.setColor(0, 0, 0, 1); //black
     sculptor.putVoxel(0, 0, 0); //0,0,0
@@ -22,25 +23,35 @@ int main() {
     sculptor.putVoxel(9, 0, 9); //xz
     sculptor.setColor(1, 1, 1, 1); //white
     sculptor.putVoxel(9, 9, 9); //xyz
+
     //Spheres
     sculptor.setColor(0.98, 0.41, 0.05, 0.3); //Ecstasy
     sculptor.putSphere(5, 5, 5, 3); //
     sculptor.cutSphere(6, 6, 6, 2); //
     sculptor.setColor(0.98, 0.41, 0.05, 0.7); //Ecstasy
     sculptor.putSphere(5, 5, 6, 2); //
+
+
+    //Ellipsoids
     sculptor.setColor(0.86, 0.07, 0.36, 0.9); //Razzmatazz
     sculptor.cutEllipsoid(3, 3, 3, 3, 2, 1); //
     sculptor.setColor(0.0, 0.71, 0.8, 0.95); //Iris Blue
     sculptor.putEllipsoid(1, 2, 6, 1, 1, 2); //
+
     //Testes
-    sculptor.putVoxel(0, 9, 9); //
-    //sculptor.putVoxel(0, 90, 9); //
-    //sculptor.putVoxel(0, 0, 90); //
-    //sculptor.putVoxel(-90, 9, 9); //
-    //sculptor.putVoxel(0, -90, 9); //
-    //sculptor.putVoxel(0, 0, -90); //
-
-
+    cout << "\nIniciando testes de fronteira\n";
+    cout << "\nTeste 1\n";
+    sculptor.putVoxel(0, 0, 90); //
+    cout << "Teste 2\n";
+    sculptor.cutVoxel(0, 90, 0); //
+    cout << "Teste 3\n";
+    sculptor.putVoxel(90, 0, 0); //
+    cout << "Teste 4\n";
+    sculptor.putVoxel(-90, 9, 9); //
+    cout << "Teste 5\n";
+    sculptor.cutVoxel(9, -90, 9); //
+    cout << "Teste 6\n";
+    sculptor.putVoxel(9, 9, -90); //
 
     sculptor.writeOFF((char *)"helloSculptor.off");
 
