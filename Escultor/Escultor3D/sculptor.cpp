@@ -1,4 +1,4 @@
-#include "sculptor.h"
+﻿#include "sculptor.h"
 #include <iostream>
 #include <cmath>
 #include <fstream>
@@ -55,24 +55,31 @@ void Sculptor::setColor(float _r, float _g, float _b, float alpha) {
 
 void Sculptor::putVoxel(int x, int y, int z) {
 
-    //if (0 > x >= nx || 0 > y >= ny || 0 > z >= nz) {
-    //    cout << "Invente não abençoado! \nA 3D Matrix tem " << nx << "," << ny << "," << nz << " de dimensão e você ainda quer mais? \n";
-    //} else {
+    if (x >= nx || y >= ny || z >= nz || x < 0 || y < 0 || z < 0) {
+        cout << "/o\\\nInvente não abençoado! \nA 3D Matrix tem " << nx << ", " << ny << ", " << nz <<
+                " de dimensão e você ainda quer mais? \n" <<
+                "Tu não estás vendo que (" << x << ", " << y << ", " << z << ") está fora da matriz?\n\n";
+
+    } else {
         v[x][y][z].r = r;
         v[x][y][z].g = g;
         v[x][y][z].b = b;
         v[x][y][z].a = a;
         v[x][y][z].isOn = true;
 
+    }
+
 }
 
 void Sculptor::cutVoxel(int x, int y, int z) {
 
-    //if (0 > x >= nx || 0 > y >= ny || 0 > z >= nz) {
-      //  cout << "Invente não abençoado! \nA 3D Matrix tem " << nx << "," << ny << "," << nz << " de dimensão e você ainda quer mais? \n";
-    //} else {
+    if (x >= nx || y >= ny || z >= nz || x < 0 || y < 0 || z < 0) {
+        cout << "/o\\\nInvente não abençoado! \nA 3D Matrix tem " << nx << ", " << ny << ", " << nz <<
+                " de dimensão e você ainda quer mais? \n" <<
+                "Tu não estás vendo que (" << x << ", " << y << ", " << z << ") está fora da matriz?\n\n";
+    } else {
         v[x][y][z].isOn = false;
-    //}
+    }
 
 }
 
@@ -250,6 +257,6 @@ void Sculptor::writeOFF(const char *filename) {
         }
     }
 
-    cout<< "The file was saved!" << endl;
     fout.close();
+    cout<< "The file was saved!" << endl;
 }
