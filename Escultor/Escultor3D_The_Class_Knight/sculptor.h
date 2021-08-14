@@ -35,15 +35,6 @@ public:
   int getMatX();
   int getMatY();
   int getMatZ();
-
-  void limparVoxels();
-  // Funções auxiliares
-
-  // metódo para verificar se o voxel esta dentro dos limites do escultor
-  bool dentroDosLimites(int x, int y, int z);
-
-  //método para inicializar a matriz 3D com voxels e com todos os campos iguais a zero
-  void inicializaMatriz3D();
 };
 
 #endif // SCULPTOR_H

@@ -18,7 +18,7 @@ PutEllipsoid::PutEllipsoid(int xcenter, int ycenter, int zcenter, int rx, int ry
 
 void PutEllipsoid::draw(Sculptor &s){
     float positionX, positionY, positionZ;
-    float result;
+    int ellipsoid;
     s.setColor(r, g, b, a);
 
     if((xcenter < s.getMatX()) &&(ycenter < s.getMatY()) && (zcenter < s.getMatZ())){
@@ -31,11 +31,9 @@ void PutEllipsoid::draw(Sculptor &s){
                     positionY = (j - ycenter);
                     positionZ = (k - zcenter);
 
-                    result = (pow(positionX, 2))/pow(rx, 2) + (pow(positionY, 2))/pow(ry, 2) + (pow(positionZ, 2))/pow(rz, 2);
+                    ellipsoid = (pow(positionX, 2))/pow(rx, 2) + (pow(positionY, 2))/pow(ry, 2) + (pow(positionZ, 2))/pow(rz, 2);
 
-                    result = sqrt(result);
-
-                    if(result <= 1) {
+                    if(ellipsoid <= 1) {
                         s.putVoxel(i, j, k);
                     }
                 }

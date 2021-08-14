@@ -1,15 +1,8 @@
 #include "sculptor.h"
 #include <iostream>
-//#include <cmath>
 #include <fstream>
 #include <iomanip>
 #include <math.h>
-
-//#include <string>
-//#include <sstream>
-
-
-//#include <vector>
 
 using namespace std;
 
@@ -29,23 +22,6 @@ Sculptor::Sculptor(int _nx, int _ny, int _nz) {
         }
     }
 }
-/*
-
-    r=1.00;
-    g=1.00;
-    b=1.00;
-    a=1.00;
-
-    v = new Voxel**[nx];
-    for(int i=0; i<nx;i++){
-        v[i] = new Voxel*[ny];
-        for(int j=0;j<ny;j++){
-            v[i][j] = new Voxel[nz];
-            for(int k =0; k<nz;k++){
-                v[i][j][k].isOn = false;
-            }
-        }
-    }*/
 
 Sculptor::~Sculptor() {
 

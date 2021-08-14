@@ -13,7 +13,9 @@ PutSphere::PutSphere(int xcenter, int ycenter, int zcenter, int radius, float r,
 
 void PutSphere::draw(Sculptor &s){
     int positionX, positionY, positionZ;
-    float result;
+    int sphere;
+    int r = pow(radius, 2);
+
     s.setColor(r, g, b, a);
 
     if((xcenter < s.getMatX()) &&(ycenter < s.getMatY()) && (zcenter < s.getMatZ())){
@@ -26,14 +28,11 @@ void PutSphere::draw(Sculptor &s){
                     positionY = ycenter - j;
                     positionZ = zcenter - k;
 
-                    result = pow(positionX, 2) + pow(positionY, 2) + pow(positionZ, 2);
+                    sphere = pow(positionX, 2) + pow(positionY, 2) + pow(positionZ, 2);
 
-                    result = sqrt(result);
-
-                    if(result <= radius){
+                    if(sphere <= r) {
                         s.putVoxel(i, j, k);
                     }
-
 
                 }
             }

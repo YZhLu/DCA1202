@@ -17,10 +17,10 @@ PutBox::PutBox(int x0, int x1, int y0, int y1, int z0, int z1, float r, float g,
 
 }
 
-void PutBox::draw(Sculptor &s){
+void PutBox::draw(Sculptor &s) {
     s.setColor(r, g, b, a);
 
-    if((x0 >= 0 && x1 < s.getMatX()) && (y0 >= 0 && y1 <s.getMatY()) && (z0 >= 0 && z1 <s.getMatZ())){
+    if((x0 >= 0 && x1 < s.getMatX()) && (y0 >= 0 && y1 <s.getMatY()) && (z0 >= 0 && z1 <s.getMatZ())) {
 
         for( int i=x0; i<=x1; i++){
             for( int j=y0; j<=y1; j++){
