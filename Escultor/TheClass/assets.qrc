@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/resource">
+        <file>assets/cutBox.png</file>
+        <file>assets/cutEllipsoid.png</file>
+        <file>assets/cutSphere.png</file>
+        <file>assets/cutVoxel.png</file>
+        <file>assets/putBox.png</file>
+        <file>assets/putEllipsoid.png</file>
+        <file>assets/putSphere.png</file>
+        <file>assets/putVoxel.png</file>
+        <file>assets/setAxis.png</file>
+        <file>assets/setColor.png</file>
+        <file>assets/newSculptor.png</file>
+        <file>assets/xy.png</file>
+        <file>assets/xz.png</file>
+        <file>assets/zy.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>assets/xy.png</file>
+        <file>assets/xz.png</file>
+        <file>assets/zy.png</file>
+    </qresource>
+</RCC>
