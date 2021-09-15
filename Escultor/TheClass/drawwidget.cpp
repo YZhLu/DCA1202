@@ -118,7 +118,7 @@ void DrawWidget::paintEvent(QPaintEvent *event) {
                 p.translate(j*dimCelula+borderh+dimCelula/2,
                             i*dimCelula+borderv+dimCelula/2);
                 p.setPen(Qt::NoPen);
-                color.setRgba(qRgba(v[i][j].r, v[i][j].g, v[i][j].b, v[i][j].a));
+                color.setRgba(qRgba(v[i][j].r*255, v[i][j].g*255, v[i][j].b*255, v[i][j].a*255));
                 gradient.setColorAt(0, Qt::white);
                 gradient.setColorAt(.3, color);
                 gradient.setColorAt(1, color.darker());
