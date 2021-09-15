@@ -3,7 +3,7 @@
 #include <cmath>
 #include <fstream>
 
-#include <qDebug>
+
 #include <vector>
 
 using namespace std;
@@ -247,7 +247,6 @@ void Sculptor::writeOFF(string filename) {
 
                     _f = total*8;
 
-                    qDebug() << 4 << " " << _f+0 << " " << _f+3 << " " << _f+2 << " " << _f+1 << " " << fixed << v[i][j][k].r << " " << fixed << v[i][j][k].g << " " << fixed << v[i][j][k].b << " " << fixed << v[i][j][k].a << endl;
 
                     fout << 4 << " " << _f+0 << " " << _f+3 << " " << _f+2 << " " << _f+1 << " " << fixed << v[i][j][k].r << " " << fixed << v[i][j][k].g << " " << fixed << v[i][j][k].b << " " << fixed << v[i][j][k].a << endl;
                     fout << 4 << " " << _f+4 << " " << _f+7 << " " << _f+3 << " " << _f+0 << " " << fixed << v[i][j][k].r << " " << fixed << v[i][j][k].g << " " << fixed << v[i][j][k].b << " " << fixed << v[i][j][k].a << endl;
