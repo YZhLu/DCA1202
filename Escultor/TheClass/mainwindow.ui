@@ -354,70 +354,7 @@
              </layout>
             </item>
             <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_12">
-              <item>
-               <spacer name="horizontalSpacer_14">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Maximum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="labelA">
-                <property name="styleSheet">
-                 <string notr="true">font-size: 24px;</string>
-                </property>
-                <property name="text">
-                 <string>A</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSlider" name="horizontalSliderA">
-                <property name="maximum">
-                 <number>255</number>
-                </property>
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="spinBoxA">
-                <property name="styleSheet">
-                 <string notr="true">font-size: 24px;</string>
-                </property>
-                <property name="maximum">
-                 <number>255</number>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <spacer name="horizontalSpacer_15">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeType">
-                 <enum>QSizePolicy::Maximum</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
+             <layout class="QHBoxLayout" name="horizontalLayout_12"/>
             </item>
            </layout>
           </item>
@@ -1944,7 +1881,7 @@
    </property>
    <property name="icon">
     <iconset resource="assets.qrc">
-     <normaloff>:/resource/assets/cutBox.png</normaloff>:/resource/assets/cutBox.png</iconset>
+     <normaloff>:/resource/assets/cutVoxel.png</normaloff>:/resource/assets/cutVoxel.png</iconset>
    </property>
    <property name="text">
     <string>CutVoxel</string>
@@ -2246,38 +2183,6 @@
     <hint type="destinationlabel">
      <x>1430</x>
      <y>180</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderA</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinBoxA</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>661</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>308</x>
-     <y>671</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinBoxA</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>horizontalSliderA</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>279</x>
-     <y>653</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>204</x>
-     <y>667</y>
     </hint>
    </hints>
   </connection>

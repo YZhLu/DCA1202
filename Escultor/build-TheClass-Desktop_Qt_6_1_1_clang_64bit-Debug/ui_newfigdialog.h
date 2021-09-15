@@ -50,7 +50,7 @@ public:
     {
         if (NewFigDialog->objectName().isEmpty())
             NewFigDialog->setObjectName(QString::fromUtf8("NewFigDialog"));
-        NewFigDialog->resize(363, 430);
+        NewFigDialog->resize(372, 430);
         NewFigDialog->setStyleSheet(QString::fromUtf8("background: rgba(82, 15, 185, 0.25); color: white; font-size: 18px;"));
         verticalLayout_3 = new QVBoxLayout(NewFigDialog);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
@@ -63,6 +63,8 @@ public:
         labelNewFigPic->setMinimumSize(QSize(250, 250));
         labelNewFigPic->setMaximumSize(QSize(250, 250));
         labelNewFigPic->setStyleSheet(QString::fromUtf8("background: blue;"));
+        labelNewFigPic->setPixmap(QPixmap(QString::fromUtf8(":/resource/assets/setAxis.png")));
+        labelNewFigPic->setScaledContents(true);
 
         horizontalLayout_4->addWidget(labelNewFigPic);
 

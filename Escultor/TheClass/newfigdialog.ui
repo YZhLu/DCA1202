@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
+    <width>372</width>
     <height>430</height>
    </rect>
   </property>
@@ -40,6 +40,12 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="assets.qrc">:/resource/assets/setAxis.png</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -160,7 +166,9 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="assets.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>buttonBox</sender>

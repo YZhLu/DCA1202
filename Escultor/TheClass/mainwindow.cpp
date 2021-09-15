@@ -22,7 +22,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     currentObject = PUTVOXEL;
     updateColor();
-
+/*
     /////// TEST
      e->putVoxel(0,0,0);
      e->setColor(1,1,1,1);
@@ -47,7 +47,7 @@ MainWindow::MainWindow(QWidget *parent)
          e->setColor(1, 1, 1, 1); //white
          e->putVoxel(9, 9, 9); //xyz
     ///
-
+*/
     ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderZ->value(), XY));
     currentPlane = XY;
 

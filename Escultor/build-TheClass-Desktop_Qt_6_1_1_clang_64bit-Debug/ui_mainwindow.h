@@ -80,11 +80,6 @@ public:
     QSpinBox *spinBoxB;
     QSpacerItem *horizontalSpacer_11;
     QHBoxLayout *horizontalLayout_12;
-    QSpacerItem *horizontalSpacer_14;
-    QLabel *labelA;
-    QSlider *horizontalSliderA;
-    QSpinBox *spinBoxA;
-    QSpacerItem *horizontalSpacer_15;
     QSpacerItem *verticalSpacer_2;
     QWidget *Box;
     QVBoxLayout *verticalLayout_12;
@@ -262,7 +257,7 @@ public:
         actionCutVoxel->setObjectName(QString::fromUtf8("actionCutVoxel"));
         actionCutVoxel->setCheckable(true);
         QIcon icon4;
-        icon4.addFile(QString::fromUtf8(":/resource/assets/cutBox.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon4.addFile(QString::fromUtf8(":/resource/assets/cutVoxel.png"), QSize(), QIcon::Normal, QIcon::Off);
         actionCutVoxel->setIcon(icon4);
         actionPutBox = new QAction(MainWindow);
         actionPutBox->setObjectName(QString::fromUtf8("actionPutBox"));
@@ -273,41 +268,43 @@ public:
         actionCutBox = new QAction(MainWindow);
         actionCutBox->setObjectName(QString::fromUtf8("actionCutBox"));
         actionCutBox->setCheckable(true);
-        actionCutBox->setIcon(icon4);
+        QIcon icon6;
+        icon6.addFile(QString::fromUtf8(":/resource/assets/cutBox.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCutBox->setIcon(icon6);
         actionPutSpheare = new QAction(MainWindow);
         actionPutSpheare->setObjectName(QString::fromUtf8("actionPutSpheare"));
         actionPutSpheare->setCheckable(true);
-        QIcon icon6;
-        icon6.addFile(QString::fromUtf8(":/resource/assets/putSphere.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionPutSpheare->setIcon(icon6);
+        QIcon icon7;
+        icon7.addFile(QString::fromUtf8(":/resource/assets/putSphere.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionPutSpheare->setIcon(icon7);
         actionCutSpheare = new QAction(MainWindow);
         actionCutSpheare->setObjectName(QString::fromUtf8("actionCutSpheare"));
         actionCutSpheare->setCheckable(true);
-        QIcon icon7;
-        icon7.addFile(QString::fromUtf8(":/resource/assets/cutSphere.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionCutSpheare->setIcon(icon7);
+        QIcon icon8;
+        icon8.addFile(QString::fromUtf8(":/resource/assets/cutSphere.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCutSpheare->setIcon(icon8);
         actionPutEllipsoid = new QAction(MainWindow);
         actionPutEllipsoid->setObjectName(QString::fromUtf8("actionPutEllipsoid"));
         actionPutEllipsoid->setCheckable(true);
-        QIcon icon8;
-        icon8.addFile(QString::fromUtf8(":/resource/assets/putEllipsoid.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionPutEllipsoid->setIcon(icon8);
+        QIcon icon9;
+        icon9.addFile(QString::fromUtf8(":/resource/assets/putEllipsoid.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionPutEllipsoid->setIcon(icon9);
         actionCutEllipsoid = new QAction(MainWindow);
         actionCutEllipsoid->setObjectName(QString::fromUtf8("actionCutEllipsoid"));
         actionCutEllipsoid->setCheckable(true);
-        QIcon icon9;
-        icon9.addFile(QString::fromUtf8(":/resource/assets/cutEllipsoid.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionCutEllipsoid->setIcon(icon9);
+        QIcon icon10;
+        icon10.addFile(QString::fromUtf8(":/resource/assets/cutEllipsoid.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionCutEllipsoid->setIcon(icon10);
         actionNew_Sculptor = new QAction(MainWindow);
         actionNew_Sculptor->setObjectName(QString::fromUtf8("actionNew_Sculptor"));
-        QIcon icon10;
-        icon10.addFile(QString::fromUtf8(":/resource/assets/newSculptor.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionNew_Sculptor->setIcon(icon10);
+        QIcon icon11;
+        icon11.addFile(QString::fromUtf8(":/resource/assets/newSculptor.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionNew_Sculptor->setIcon(icon11);
         actionExportOFF = new QAction(MainWindow);
         actionExportOFF->setObjectName(QString::fromUtf8("actionExportOFF"));
-        QIcon icon11;
-        icon11.addFile(QString::fromUtf8(":/resource/assets/setAxis.png"), QSize(), QIcon::Normal, QIcon::Off);
-        actionExportOFF->setIcon(icon11);
+        QIcon icon12;
+        icon12.addFile(QString::fromUtf8(":/resource/assets/setAxis.png"), QSize(), QIcon::Normal, QIcon::Off);
+        actionExportOFF->setIcon(icon12);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
         verticalLayout_3 = new QVBoxLayout(centralwidget);
@@ -337,9 +334,9 @@ public:
         pushButtonColor->setMinimumSize(QSize(250, 250));
         pushButtonColor->setMaximumSize(QSize(250, 250));
         pushButtonColor->setStyleSheet(QString::fromUtf8(""));
-        QIcon icon12;
-        icon12.addFile(QString::fromUtf8(":/resource/assets/setColor.png"), QSize(), QIcon::Normal, QIcon::Off);
-        pushButtonColor->setIcon(icon12);
+        QIcon icon13;
+        icon13.addFile(QString::fromUtf8(":/resource/assets/setColor.png"), QSize(), QIcon::Normal, QIcon::Off);
+        pushButtonColor->setIcon(icon13);
         pushButtonColor->setIconSize(QSize(150, 150));
 
         horizontalLayout_7->addWidget(pushButtonColor);
@@ -465,34 +462,6 @@ public:
 
         horizontalLayout_12 = new QHBoxLayout();
         horizontalLayout_12->setObjectName(QString::fromUtf8("horizontalLayout_12"));
-        horizontalSpacer_14 = new QSpacerItem(40, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
-
-        horizontalLayout_12->addItem(horizontalSpacer_14);
-
-        labelA = new QLabel(Color);
-        labelA->setObjectName(QString::fromUtf8("labelA"));
-        labelA->setStyleSheet(QString::fromUtf8("font-size: 24px;"));
-
-        horizontalLayout_12->addWidget(labelA);
-
-        horizontalSliderA = new QSlider(Color);
-        horizontalSliderA->setObjectName(QString::fromUtf8("horizontalSliderA"));
-        horizontalSliderA->setMaximum(255);
-        horizontalSliderA->setOrientation(Qt::Horizontal);
-
-        horizontalLayout_12->addWidget(horizontalSliderA);
-
-        spinBoxA = new QSpinBox(Color);
-        spinBoxA->setObjectName(QString::fromUtf8("spinBoxA"));
-        spinBoxA->setStyleSheet(QString::fromUtf8("font-size: 24px;"));
-        spinBoxA->setMaximum(255);
-
-        horizontalLayout_12->addWidget(spinBoxA);
-
-        horizontalSpacer_15 = new QSpacerItem(40, 20, QSizePolicy::Maximum, QSizePolicy::Minimum);
-
-        horizontalLayout_12->addItem(horizontalSpacer_15);
-
 
         verticalLayout_4->addLayout(horizontalLayout_12);
 
@@ -1290,8 +1259,6 @@ public:
         QObject::connect(layerSliderY, &QSlider::valueChanged, spinBoxLayerY, &QSpinBox::setValue);
         QObject::connect(spinBoxLayerZ, &QSpinBox::valueChanged, layerSliderZ, &QSlider::setValue);
         QObject::connect(layerSliderZ, &QSlider::sliderMoved, spinBoxLayerZ, &QSpinBox::setValue);
-        QObject::connect(horizontalSliderA, &QSlider::valueChanged, spinBoxA, &QSpinBox::setValue);
-        QObject::connect(spinBoxA, &QSpinBox::valueChanged, horizontalSliderA, &QSlider::setValue);
         QObject::connect(spinBoxB, &QSpinBox::valueChanged, horizontalSliderB, &QSlider::setValue);
         QObject::connect(horizontalSliderB, &QSlider::valueChanged, spinBoxB, &QSpinBox::setValue);
         QObject::connect(horizontalSliderG, &QSlider::valueChanged, spinBoxG, &QSpinBox::setValue);
@@ -1382,7 +1349,6 @@ public:
         labelR->setText(QCoreApplication::translate("MainWindow", "R", nullptr));
         labelG->setText(QCoreApplication::translate("MainWindow", "G", nullptr));
         labelB->setText(QCoreApplication::translate("MainWindow", "B", nullptr));
-        labelA->setText(QCoreApplication::translate("MainWindow", "A", nullptr));
         toolBox->setItemText(toolBox->indexOf(Color), QCoreApplication::translate("MainWindow", "Color", nullptr));
         labelPutBoxPic->setText(QString());
         labelPutBoxZ->setText(QCoreApplication::translate("MainWindow", "Z", nullptr));
