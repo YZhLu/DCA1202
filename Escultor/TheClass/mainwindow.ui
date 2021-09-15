@@ -33,8 +33,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>357</width>
-           <height>651</height>
+           <width>356</width>
+           <height>638</height>
           </rect>
          </property>
          <attribute name="label">
@@ -171,7 +171,7 @@
                  <number>255</number>
                 </property>
                 <property name="value">
-                 <number>255</number>
+                 <number>1</number>
                 </property>
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
@@ -441,8 +441,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>340</width>
-           <height>654</height>
+           <width>356</width>
+           <height>664</height>
           </rect>
          </property>
          <attribute name="label">
@@ -844,8 +844,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>340</width>
-           <height>654</height>
+           <width>356</width>
+           <height>674</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1165,8 +1165,8 @@
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>342</width>
-           <height>676</height>
+           <width>356</width>
+           <height>686</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1785,7 +1785,7 @@
      <x>0</x>
      <y>0</y>
      <width>1460</width>
-     <height>25</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFILE">
@@ -1880,6 +1880,9 @@
    <property name="toolTip">
     <string>display XY plane</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+Z</string>
+   </property>
   </action>
   <action name="actionXZ">
    <property name="checkable">
@@ -1894,6 +1897,9 @@
    </property>
    <property name="toolTip">
     <string>display XZ plane</string>
+   </property>
+   <property name="shortcut">
+    <string>Shift+Y</string>
    </property>
   </action>
   <action name="actionZY">
@@ -1910,6 +1916,9 @@
    <property name="toolTip">
     <string>display ZY plane</string>
    </property>
+   <property name="shortcut">
+    <string>Shift+X</string>
+   </property>
   </action>
   <action name="actionPutVoxel">
    <property name="checkable">
@@ -1925,6 +1934,9 @@
    <property name="toolTip">
     <string>putVoxel</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+V</string>
+   </property>
   </action>
   <action name="actionCutVoxel">
    <property name="checkable">
@@ -1936,6 +1948,9 @@
    </property>
    <property name="text">
     <string>CutVoxel</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+V</string>
    </property>
   </action>
   <action name="actionPutBox">
@@ -1949,6 +1964,9 @@
    <property name="text">
     <string>PutBox</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+B</string>
+   </property>
   </action>
   <action name="actionCutBox">
    <property name="checkable">
@@ -1960,6 +1978,9 @@
    </property>
    <property name="text">
     <string>CutBox</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+B</string>
    </property>
   </action>
   <action name="actionPutSpheare">
@@ -1973,6 +1994,9 @@
    <property name="text">
     <string>PutSpheare</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+S</string>
+   </property>
   </action>
   <action name="actionCutSpheare">
    <property name="checkable">
@@ -1984,6 +2008,9 @@
    </property>
    <property name="text">
     <string>CutSpheare</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+S</string>
    </property>
   </action>
   <action name="actionPutEllipsoid">
@@ -1997,6 +2024,9 @@
    <property name="text">
     <string>PutEllipsoid</string>
    </property>
+   <property name="shortcut">
+    <string>Alt+E</string>
+   </property>
   </action>
   <action name="actionCutEllipsoid">
    <property name="checkable">
@@ -2008,6 +2038,9 @@
    </property>
    <property name="text">
     <string>CutEllipsoid</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+E</string>
    </property>
   </action>
   <action name="actionNew_Sculptor">
@@ -2035,6 +2068,9 @@
    </property>
    <property name="toolTip">
     <string>Export OFF</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
  </widget>
@@ -2086,38 +2122,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>horizontalSliderA</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinBoxA</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>661</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>308</x>
-     <y>671</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinBoxA</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>horizontalSliderA</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>279</x>
-     <y>653</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>204</x>
-     <y>667</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>horizontalSliderCutSphere</sender>
    <signal>valueChanged(int)</signal>
    <receiver>spinBoxCutSphere</receiver>
@@ -2130,54 +2134,6 @@
     <hint type="destinationlabel">
      <x>273</x>
      <y>775</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderG</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinBoxG</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>198</x>
-     <y>567</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>287</x>
-     <y>567</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderB</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinBoxB</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>197</x>
-     <y>614</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>287</x>
-     <y>615</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinBoxG</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>horizontalSliderG</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>279</x>
-     <y>561</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>205</x>
-     <y>575</y>
     </hint>
    </hints>
   </connection>
@@ -2198,22 +2154,6 @@
    </hints>
   </connection>
   <connection>
-   <sender>spinBoxR</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>horizontalSliderR</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>279</x>
-     <y>515</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>204</x>
-     <y>529</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>spinBoxPutSphere</sender>
    <signal>valueChanged(int)</signal>
    <receiver>horizontalSliderPutSphere</receiver>
@@ -2226,38 +2166,6 @@
     <hint type="destinationlabel">
      <x>169</x>
      <y>427</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>horizontalSliderR</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>spinBoxR</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>230</x>
-     <y>523</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>308</x>
-     <y>533</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>spinBoxB</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>horizontalSliderB</receiver>
-   <slot>setValue(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>279</x>
-     <y>607</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>204</x>
-     <y>621</y>
     </hint>
    </hints>
   </connection>
@@ -2338,6 +2246,134 @@
     <hint type="destinationlabel">
      <x>1430</x>
      <y>180</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderA</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxA</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>661</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>671</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxA</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSliderA</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>653</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>667</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSliderB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>607</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>621</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderB</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxB</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>197</x>
+     <y>614</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>615</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>198</x>
+     <y>567</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>287</x>
+     <y>567</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxG</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSliderG</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>561</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>205</x>
+     <y>575</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>horizontalSliderR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>279</x>
+     <y>515</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>529</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>horizontalSliderR</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>spinBoxR</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>230</x>
+     <y>523</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>308</x>
+     <y>533</y>
     </hint>
    </hints>
   </connection>
