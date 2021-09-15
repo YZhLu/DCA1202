@@ -25,30 +25,30 @@ MainWindow::MainWindow(QWidget *parent)
 
     /////// TEST
      e->putVoxel(0,0,0);
-     e->setColor(255,255,255,255);
+     e->setColor(1,1,1,1);
      e->putVoxel(9,9,9);
-     e->setColor(0,0,255,255);
+     e->setColor(0,0,1,1);
      e->putVoxel(9,9,9);
 
-     e->setColor(0, 0, 0, 255); //black
+     e->setColor(0, 0, 0, 1); //black
          e->putVoxel(0, 0, 0); //0,0,0
-         e->setColor(255, 0, 0, 255); //red
+         e->setColor(1, 0, 0, 1); //red
          e->putVoxel(9, 0, 0); //x-axis
-         e->setColor(0, 255, 0, 255); //green
+         e->setColor(0, 1, 0, 1); //green
          e->putVoxel(0, 9, 0); //y-axis
-         e->setColor(0, 0, 255, 255); //blue
+         e->setColor(0, 0, 1, 1); //blue
          e->putVoxel(0, 0, 9); //z-axis
-         e->setColor(0, 255, 255, 255); //cyan
+         e->setColor(0, 1, 1, 1); //cyan
          e->putVoxel(0, 9, 9); //yz
-         e->setColor(255, 255, 0, 255); //yellow
+         e->setColor(1, 1, 0, 1); //yellow
          e->putVoxel(9, 9, 0); //xy
-         e->setColor(255, 0, 255, 255); //magenta
+         e->setColor(1, 0, 1, 1); //magenta
          e->putVoxel(9, 0, 9); //xz
-         e->setColor(255, 255, 255, 255); //white
+         e->setColor(1, 1, 1, 1); //white
          e->putVoxel(9, 9, 9); //xyz
     ///
 
-    ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderX->value(), XY));
+    ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderZ->value(), XY));
     currentPlane = XY;
 
     /// Plane Selector
@@ -222,7 +222,7 @@ void MainWindow::updateColor() {
 
     //qDebug() << r << g<< b << color;
     ui->pushButtonColor->setStyleSheet(color);
-    e->setColor(r,g,b,255);
+    e->setColor(r/255,g/255,b/255,1);
 }
 
 void MainWindow::setR(int _r) {
@@ -551,7 +551,7 @@ void MainWindow::on_actionCutEllipsoid() {
 
 void MainWindow::on_layerSliderXChange() {
     //qDebug() << "slider" << ui->verticalSliderLayer->value() << "plane" << currentPlane;
-    if (currentPlane == XY) {
+    if (currentPlane == ZY) {
         ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderX->value(), currentPlane));
     }
 }
@@ -564,7 +564,7 @@ void MainWindow::on_layerSliderYChange() {
 }
 void MainWindow::on_layerSliderZChange() {
     //qDebug() << "slider" << ui->verticalSliderLayer->value() << "plane" << currentPlane;
-    if (currentPlane == ZY) {
+    if (currentPlane == XY) {
         ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderZ->value(), currentPlane));
 
     }
@@ -590,15 +590,20 @@ void MainWindow::on_newSculptor() {
         ui->spinBoxLayerZ->setMaximum(dimY-1);
         r = g = b = 255;
         updateColor();
+
+        //Here
+        ui->widgetCanvas->loadMatrix(e->getPlano(ui->layerSliderZ->value(), XY));
+        currentPlane = XY;
     }
 
 }
 
 void MainWindow::on_actionExportOFF() {
     QFileDialog dialog;
+
     QString filename = dialog.getSaveFileName(this, tr("Salvar"),
                                               QDir::currentPath(),
-                                              tr("Arquivo OFF(*.off"));
+                                              tr("Arquivo OFF(*.off)"));
     if(filename.isNull()) {
         return;
     }
